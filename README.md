@@ -46,11 +46,56 @@ project/
 ├── project.py           # Main application with functions and entry point
 ├── test_project.py      # Automated pytest test suite for core functions
 ├── requirements.txt     # External dependencies (requests, pytest)
-├── .env                 # Environment variable file (API_KEY=...)
+├── .env                 # Environment variable file (API_KEY=...) 
 └── cache/               # JSON cache files for API results
 ```
 
 ---
+
+## 🚀 Setup Instructions
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/Braddiiee/recipe-finder.git
+cd recipe-finder
+```
+
+### 2. Set Up a Virtual Environment (optional but recommended)
+
+```bash
+python -m venv venv
+source venv/bin/activate     # On Windows use: venv\Scripts\activate
+```
+
+### 3. Install Dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+### 4. Set Your API Key
+
+Create a `.env` file in the root directory and add your Spoonacular API key:
+
+```env
+API_KEY=your_spoonacular_api_key_here
+```
+
+(You can refer to `.env.example` for the correct format.)
+
+### 5. Run the App
+
+```bash
+python project.py
+```
+
+### 6. Run the Tests (optional)
+
+```bash
+pytest
+```
+
 
 ## Design Choices
 
@@ -67,7 +112,7 @@ project/
   Ingredient strings are rigorously sanitized to prevent malformed API queries (e.g., stray punctuation) and to standardize naming for cache filenames.
 
 * **Testing-First Mindset**:
-  Core logic functions were developed alongside their tests (pytest).
+  Core logic functions were developed alongside their tests (pytest). 
 
 
 ## Future Improvements
